@@ -1,30 +1,260 @@
 {
 	"intents": [
-		{
-			"tag": "greeting",
-			"patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings"],
-			"responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"]
-		},
-		{
-			"tag": "goodbye",
-			"patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "cao", "see ya"],
-			"responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"]
-		},
-		{
-			"tag": "programming",
-			"patterns": ["What is progamming?", "What is coding?", "Tell me about programming", "Tell me about coding", "What is software development?"],
-			"responses": ["Programming, coding or software development, means writing computer code to automate tasks."]
-		},
-		{
-			"tag": "resource",
-			"patterns": ["Where can I learn to code?", "Best way to learn to code", "How can I learn programming", "Good programming resources",
-								   "Can you recommend good coding resources?"],
-			"responses": ["You can check out Github, Youtube or you class resources for learning to code."]
-		},
-		{
-			"tag": "stocks",
-			"patterns": ["What are my stocks?", "Which stocks do I own?", "Show my stock portfolio"],
-			"responses": ["Here are your stocks!"]
-		}
+	  {
+		"tag": "greeting",
+		"patterns": ["Hi", "Hello", "Hey", "Good day", "Greetings", "What's up", "Hey", "Hi there", "Howdy", "Good morning", "Good afternoon"],
+		"responses": ["Hello!", "Hi there!", "Hey! How can I assist you today?", "Greetings! What can I do for you?", "Hello! Nice to see you!"]
+	  },
+	  {
+		"tag": "goodbye",
+		"patterns": ["bye", "see you", "goodbye", "take care", "later", "ciao", "see you soon", "farewell"],
+		"responses": ["Goodbye!", "Have a great day!", "See you later!", "Take care!", "Bye! Come back soon!"]
+	  },
+	  {
+		"tag": "thanks",
+		"patterns": ["Thank you", "Thanks", "That's helpful", "Awesome, thanks", "Appreciate it"],
+		"responses": ["You're welcome!", "Happy to help!", "Anytime!", "My pleasure!"]
+	  },
+	  {
+		"tag": "programming",
+		"patterns": ["What is programming?", "Explain coding", "Tell me about software development", "Definition of programming", "What's coding"],
+		"responses": ["Programming is writing code to instruct computers to perform tasks.", "Coding involves creating software or applications using various programming languages."]
+	  },
+	  {
+		"tag": "coding_resources",
+		"patterns": ["Best coding websites", "Recommend programming courses", "Good platforms to learn coding", "Coding tutorials"],
+		"responses": ["You can learn coding from platforms like Coursera, Udemy, Codecademy, FreeCodeCamp, and YouTube.", "Consider exploring free resources like Codecademy, Coursera, edX, and Khan Academy for learning programming."]
+	  },
+	  {
+		"tag": "weather",
+		"patterns": ["What's the weather like?", "Weather update", "Today's weather", "Forecast", "Weather today"],
+		"responses": ["It's sunny today!", "Expect some rain later today.", "Today's weather looks cloudy with a chance of showers."]
+	  },
+	  {
+		"tag": "news",
+		"patterns": ["Latest news", "What's happening today?", "News update", "Current events", "Tell me the news"],
+		"responses": ["Here are today's top headlines!", "Today's highlights include...", "Here's what's trending today."]
+	  },
+	  {
+		"tag": "weather",
+		"patterns": ["Weather today", "Forecast", "How is the weather?", "Weather report", "Weather update"],
+		"responses": ["The temperature today is 25°C.", "It will be rainy most of the day.", "Currently, it's sunny with mild temperatures."]
+	  },
+	  {
+		"tag": "chatbot_identity",
+		"patterns": ["Who are you?", "What are you?", "Are you a bot?", "Tell me about yourself"],
+		"responses": ["I'm a chatbot designed to assist you!", "I'm your virtual assistant, here to help.", "Yes, I'm an AI chatbot, how can I assist you?"]
+	  },
+	  {
+		"tag": "complaint",
+		"patterns": ["I have a problem", "This isn't working", "I need help", "Something went wrong", "Issue with service"],
+		"responses": ["I'm sorry to hear that. Can you describe the issue?", "I'm here to help. Can you provide more details?", "Let's see how we can solve this problem together."]
+	  },
+	  {
+		"tag": "movies",
+		"patterns": ["Recommend a good movie", "Best movies", "What's a good film to watch?", "Suggest movies", "Movie recommendations"],
+		"responses": ["You should watch Inception, The Shawshank Redemption, or The Godfather.", "Some great movies include The Dark Knight, Forrest Gump, and Interstellar."]
+	  },
+	  {
+		"tag": "books",
+		"patterns": ["Suggest a book", "Best books", "Book recommendations", "What book should I read?", "Recommend novels"],
+		"responses": ["You might enjoy 'To Kill a Mockingbird', '1984', or 'The Great Gatsby'.", "Check out 'Sapiens', 'The Alchemist', or 'The Catcher in the Rye'."]
+	  },
+	  {
+		"tag": "music",
+		"patterns": ["Suggest good music", "Music recommendations", "Best songs", "Recommend some music", "What should I listen to?"],
+		"responses": ["Try listening to some classic rock or explore modern pop hits.", "You might enjoy artists like Taylor Swift, Ed Sheeran, or The Beatles."]
+	  },
+	  {
+		"tag": "theater",
+		"patterns": ["Recommend theater plays", "Good theater shows", "What's on stage?", "Theater recommendations"],
+		"responses": ["Popular theater plays include Hamilton, Les Misérables, and The Phantom of the Opera.", "You might enjoy recent hits like Dear Evan Hansen or classic plays like Death of a Salesman."]
+	  },
+	  {
+		"tag": "cinema",
+		"patterns": ["What's playing in cinemas?", "Cinema recommendations", "Movies in theaters", "Good films currently in cinemas"],
+		"responses": ["Currently popular movies include recent blockbusters and acclaimed indie films. Check local listings for details.", "You could see the latest Marvel release or perhaps a new indie drama at your local cinema."]
+	  },
+	  {
+		"tag": "hockey",
+		"patterns": ["Who's the best hockey team?", "Recent NHL results", "Tell me about ice hockey", "Famous hockey players", "Hockey scores", "Stanley Cup winners", "Upcoming hockey games", "Explain hockey rules"],
+		"responses": ["Popular NHL teams include the Toronto Maple Leafs, Boston Bruins, and Montreal Canadiens.", "Recent NHL champions include Tampa Bay Lightning and Vegas Golden Knights."]
+	  },
+	  {
+		"tag": "soccer",
+		"patterns": ["Best soccer teams", "Recent soccer results", "Tell me about soccer", "Famous soccer players", "Soccer match scores", "World Cup winners", "Upcoming soccer games", "Explain soccer rules"],
+		"responses": ["Top soccer teams include Manchester City, Real Madrid, and FC Barcelona.", "Notable players are Lionel Messi, Cristiano Ronaldo, and Kylian Mbappé."]
+	  },
+	  {
+		"tag": "rugby",
+		"patterns": ["Best rugby teams", "Recent rugby results", "Tell me about rugby", "Famous rugby players", "Rugby match scores", "Rugby World Cup winners", "Upcoming rugby games", "Explain rugby rules"],
+		"responses": ["Prominent rugby teams are the New Zealand All Blacks, South Africa Springboks, and England.", "Notable players include Richie McCaw and Dan Carter."]
+	  },
+	  {
+		"tag": "baseball",
+		"patterns": ["Best baseball teams", "Recent baseball results", "Tell me about baseball", "Famous baseball players", "Baseball scores", "World Series winners", "Upcoming baseball games", "Explain baseball rules"],
+		"responses": ["Top baseball teams include the New York Yankees, Los Angeles Dodgers, and Boston Red Sox.", "Famous players include Babe Ruth, Jackie Robinson, and Derek Jeter."]
+	  },
+	  {
+		"tag": "basketball",
+		"patterns": ["Best basketball teams", "Recent NBA results", "Tell me about basketball", "Famous basketball players", "Basketball scores", "NBA champions", "Upcoming basketball games", "Explain basketball rules"],
+		"responses": ["Popular NBA teams include the Los Angeles Lakers, Golden State Warriors, and Boston Celtics.", "Notable players are Michael Jordan, LeBron James, and Kobe Bryant."]
+	  },
+	  {
+		"tag": "american_football",
+		"patterns": ["Best NFL teams", "Recent NFL results", "Tell me about American football", "Famous NFL players", "NFL scores", "Super Bowl winners", "Upcoming NFL games", "Explain football rules"],
+		"responses": ["Leading NFL teams are the Kansas City Chiefs, New England Patriots, and Dallas Cowboys.", "Famous NFL players include Tom Brady, Patrick Mahomes, and Jerry Rice."]
+	  },
+	  {
+		"tag": "golf",
+		"patterns": ["Tell me about golf", "Famous golfers", "Golf tournament results", "Upcoming golf tournaments", "Explain golf rules", "Major golf championships", "Golf scores", "Best golf courses"],
+		"responses": ["Famous golfers include Tiger Woods, Jack Nicklaus, and Rory McIlroy.", "Major golf tournaments include The Masters, U.S. Open, and PGA Championship."]
+	  },
+	  {
+		"tag": "swimming",
+		"patterns": ["Tell me about swimming", "Famous swimmers", "Olympic swimming results", "Upcoming swimming competitions", "Explain swimming strokes", "Best swimming records", "Swimming events", "Swimming techniques"],
+		"responses": ["Famous swimmers include Michael Phelps, Katie Ledecky, and Ian Thorpe.", "Swimming competitions include events like freestyle, butterfly, backstroke, and breaststroke."]
+	  },
+	  {
+		"tag": "handball",
+		"patterns": ["Tell me about handball", "Famous handball players", "Handball match results", "Upcoming handball matches", "Explain handball rules", "Best handball teams", "Handball championships", "Handball scores"],
+		"responses": ["Top handball teams include Denmark, France, and Norway.", "Famous handball players include Mikkel Hansen and Nikola Karabatić."]
+	  },
+	  {
+		"tag": "fencing",
+		"patterns": ["Tell me about fencing", "Famous fencers", "Fencing tournament results", "Upcoming fencing competitions", "Explain fencing rules", "Types of fencing weapons", "Fencing techniques", "Olympic fencing winners"],
+		"responses": ["Famous fencers include Valentina Vezzali and Aldo Montano.", "The three weapons used in fencing are foil, épée, and sabre."]
+	  },
+	  {
+		"tag": "dogs",
+		"patterns": ["Tell me about dogs", "Best dog breeds", "How to care for a dog", "Dog food recommendations", "Dog training tips", "Dog health issues", "Famous dogs", "Adopt a dog"],
+		"responses": ["Popular dog breeds include Labrador Retriever, German Shepherd, and Golden Retriever.", "Make sure your dog has regular vet visits and a balanced diet."]
+	  },
+	  {
+		"tag": "cats",
+		"patterns": ["Tell me about cats", "Best cat breeds", "How to care for a cat", "Cat food recommendations", "Cat training tips", "Cat health issues", "Famous cats", "Adopt a cat"],
+		"responses": ["Popular cat breeds include Persian, Siamese, and Maine Coon.", "Cats are generally independent and require less attention than dogs, but still need love and care."]
+	  },
+	  {
+		"tag": "fish",
+		"patterns": ["Tell me about fish", "Best fish for beginners", "How to care for fish", "Aquarium tips", "Fish food recommendations", "Fish tank maintenance", "Famous types of fish", "Adopting fish"],
+		"responses": ["Easy-to-care-for fish include goldfish, guppies, and bettas.", "Regular aquarium cleaning and balanced feeding schedules help keep fish healthy."]
+	  },
+	  {
+		"tag": "rabbits",
+		"patterns": ["Tell me about rabbits", "Best rabbit breeds", "How to care for a rabbit", "Rabbit food recommendations", "Rabbit care tips", "Rabbit health issues", "Famous rabbit breeds", "Adopting a rabbit"],
+		"responses": ["Common rabbit breeds include Holland Lop, Netherland Dwarf, and Flemish Giant.", "Rabbits require daily exercise and fresh hay as part of their diet."]
+	  },
+	  {
+		"tag": "birds",
+		"patterns": ["Tell me about birds", "Best birds for pets", "How to care for birds", "Bird food recommendations", "Bird care tips", "Bird cage setup", "Famous bird types", "Adopting a bird"],
+		"responses": ["Popular pet birds include parakeets, cockatiels, and canaries.", "Birds thrive on a varied diet and require daily social interaction and exercise."]
+	  },
+	  {
+		"tag": "horse",
+		"patterns": ["Tell me about horses", "Best horse breeds", "Horse care tips", "Horse riding basics", "Famous horses", "Horse nutrition", "Horse training methods", "How to adopt a horse"],
+		"responses": ["Popular horse breeds include Arabian, Thoroughbred, and Quarter Horse.", "Horses require regular grooming, balanced nutrition, and exercise to stay healthy."]
+	  },
+	  {
+		"tag": "lion",
+		"patterns": ["Tell me about lions", "Lion habitat", "Lion diet", "Famous lions", "Lion conservation status", "Lion behavior", "How long do lions live?", "Lion prides"],
+		"responses": ["Lions live in groups called prides and primarily inhabit savannas and grasslands.", "Famous lions include Simba from 'The Lion King' and Cecil the lion."]
+	  },
+	  {
+		"tag": "panther",
+		"patterns": ["Tell me about panthers", "Panther habitat", "Panther diet", "Famous panthers", "Panther species", "Are panthers endangered?", "Panther behavior", "Difference between panther and leopard"],
+		"responses": ["The term panther usually refers to black-coated leopards or jaguars.", "Panthers are known for their stealth and adaptability."]
+	  },
+	  {
+		"tag": "leopard",
+		"patterns": ["Tell me about leopards", "Leopard habitat", "Leopard diet", "Famous leopards", "Leopard conservation", "How fast are leopards?", "Leopard characteristics", "Are leopards solitary animals?"],
+		"responses": ["Leopards are solitary animals known for their agility and strength.", "They can run up to speeds of about 58 km/h (36 mph)."]
+	  },
+	  {
+		"tag": "cheetah",
+		"patterns": ["Tell me about cheetahs", "Cheetah speed", "Cheetah diet", "Famous cheetahs", "Cheetah conservation", "How fast can a cheetah run?", "Cheetah vs leopard differences", "Cheetah habitat"],
+		"responses": ["Cheetahs are the fastest land animals, capable of reaching speeds up to 100 km/h (62 mph).", "They primarily inhabit savannahs and grasslands."]
+	  },
+	  {
+		"tag": "tiger",
+		"patterns": ["Tell me about tigers", "Tiger habitat", "Tiger diet", "Famous tigers", "Tiger conservation status", "How many tiger species are there?", "Tiger behavior", "How long do tigers live?"],
+		"responses": ["Tigers are the largest cat species, living primarily in Asia.", "The Bengal and Siberian tigers are among the most well-known subspecies."]
+	  },
+	  {
+		"tag": "elephants",
+		"patterns": ["Tell me about elephants", "Elephant habitat", "Elephant diet", "Famous elephants", "Elephant conservation", "Elephant characteristics", "How long do elephants live?", "Elephant behavior"],
+		"responses": ["Elephants are the largest land animals, known for their intelligence and memory.", "Famous elephants include Dumbo and Jumbo."]
+	  },
+	  {
+		"tag": "giraffe",
+		"patterns": ["Tell me about giraffes", "Giraffe habitat", "Giraffe diet", "Famous giraffes", "Giraffe conservation", "Giraffe characteristics", "How tall are giraffes?", "Giraffe behavior"],
+		"responses": ["Giraffes are the tallest mammals, reaching up to 18 feet in height.", "They primarily feed on leaves from tall trees such as acacias."]
+	  },
+	  {
+		"tag": "zebra",
+		"patterns": ["Tell me about zebras", "Zebra habitat", "Zebra diet", "Famous zebras", "Zebra conservation", "Zebra stripes", "Why do zebras have stripes?", "Zebra behavior"],
+		"responses": ["Zebras are known for their distinctive black-and-white striped coats.", "They inhabit the grasslands and savannas of Africa."]
+	  },
+	  {
+		"tag": "monkeys",
+		"patterns": ["Tell me about monkeys", "Monkey species", "Monkey diet", "Famous monkeys", "Monkey conservation", "Monkey behavior", "Where do monkeys live?", "Are monkeys intelligent?"],
+		"responses": ["Monkeys are highly intelligent primates found mainly in tropical forests.", "Well-known monkey species include capuchins, baboons, and macaques."]
+	  },
+	  {
+		"tag": "humans",
+		"patterns": ["Tell me about humans", "Human diet", "Human behavior", "Human history", "Famous humans", "Human lifespan", "Human characteristics", "How many people are there on Earth?"],
+		"responses": ["Humans are highly intelligent primates with complex social structures and cultures.", "The average human lifespan is currently around 72 years globally."]
+	  },
+	  {
+		"tag": "wolves",
+		"patterns": ["Tell me about wolves", "Wolf diet", "Wolf packs", "Famous wolves", "Wolf conservation", "Wolf characteristics", "How do wolves hunt?", "Wolf behavior"],
+		"responses": ["Wolves are highly social animals that live in packs.", "They primarily hunt in packs and prey on large mammals like deer and elk."]
+	  },
+	  {
+		"tag": "bears",
+		"patterns": ["Tell me about bears", "Bear diet", "Bear habitats", "Famous bears", "Bear conservation", "Types of bears", "How big do bears get?", "Bear behavior"],
+		"responses": ["Bears vary greatly in size, with polar bears being the largest species.", "Common species include grizzly bears, polar bears, and black bears."]
+	  },
+	  {
+		"tag": "artificial_intelligence",
+		"patterns": ["What is artificial intelligence?", "Explain AI", "Uses of AI", "AI applications", "Famous AI systems", "How does AI work?", "Is AI dangerous?", "Future of AI"],
+		"responses": ["Artificial intelligence involves systems capable of tasks typically requiring human intelligence.", "AI is used in fields like healthcare, automotive, and customer service."]
+	  },
+	  {
+		"tag": "cybersecurity",
+		"patterns": ["What is cybersecurity?", "Protecting data", "Cybersecurity tips", "What is phishing?", "Data protection advice", "How to prevent hacking?", "Types of cyber attacks", "Secure my accounts"],
+		"responses": ["Good cybersecurity practices include strong passwords and regular software updates.", "Phishing is a method attackers use to steal personal information by disguising as trustworthy entities."]
+	  },
+	  {
+		"tag": "cloud_computing",
+		"patterns": ["Explain cloud computing", "Benefits of cloud computing", "AWS vs Azure", "Cloud storage solutions", "Cloud computing basics", "Cloud providers", "Advantages of cloud computing", "Types of cloud services"],
+		"responses": ["Cloud computing offers scalable resources and flexible data storage solutions.", "Major cloud service providers include AWS, Azure, and Google Cloud."]
+	  },
+	  {
+		"tag": "cryptocurrency",
+		"patterns": ["What is cryptocurrency?", "Bitcoin explanation", "Best cryptocurrencies", "How does blockchain work?", "Crypto investments", "Explain Bitcoin mining", "Cryptocurrency safety", "Crypto market news"],
+		"responses": ["Cryptocurrencies are digital currencies that use blockchain technology for security.", "Popular cryptocurrencies include Bitcoin, Ethereum, and Litecoin."]
+	  },
+	  {
+		"tag": "banking",
+		"patterns": ["Tell me about banking", "Opening a bank account", "Banking services", "Types of bank accounts", "Interest rates", "Online banking", "How to get a loan?", "Investment banking"],
+		"responses": ["Banks offer various services including checking accounts, savings accounts, loans, and mortgages.", "To open a bank account, you'll typically need identification and proof of address."]
+	  },
+	  {
+		"tag": "video_games",
+		"patterns": ["Tell me about video games", "Best video games", "Upcoming games", "Popular games now", "Gaming news", "Video game genres", "Gaming consoles", "Top-rated video games"],
+		"responses": ["Popular video games include The Legend of Zelda, Fortnite, and Elden Ring.", "Gaming consoles include PlayStation, Xbox, Nintendo Switch, and PC."]
+	  },
+	  {
+		"tag": "astronomy",
+		"patterns": ["Tell me about astronomy", "What are black holes?", "Explain stars", "Planets of the solar system", "Astronomy news", "Space exploration", "Famous astronomers", "What is a galaxy?"],
+		"responses": ["Astronomy is the study of celestial objects like stars, planets, and galaxies.", "Famous astronomers include Galileo Galilei, Carl Sagan, and Neil deGrasse Tyson."]
+	  },
+	  {
+		"tag": "physics",
+		"patterns": ["Tell me about physics", "Explain gravity", "What is quantum physics?", "Physics theories", "Famous physicists", "Physics discoveries", "Basics of relativity", "What is particle physics?"],
+		"responses": ["Physics explores the fundamental principles governing the universe, from quantum mechanics to relativity.", "Famous physicists include Albert Einstein, Isaac Newton, and Stephen Hawking."]
+	  }
 	]
-}
+  }
+  

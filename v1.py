@@ -1,5 +1,5 @@
 '''
-Chatbot using bag of words concept
+Chatbot using bag of words with simple Pytorch Neural Network
 '''
 
 
@@ -158,11 +158,11 @@ class ChatbotAssistant:
         
 
 if __name__ == '__main__':
-    #assistant = ChatbotAssistant('intents.json')
-    #assistant.parse_intents()
-    #assistant.prepare_data()
-    #assistant.train_model(batch_size=8, lr=0.001, epochs=200)
-    #assistant.save_model('chatbot.pth', 'dimensions.json')
+    # assistant = ChatbotAssistant('intents.json')
+    # assistant.parse_intents()
+    # assistant.prepare_data()
+    # assistant.train_model(batch_size=8, lr=0.001, epochs=200)
+    # assistant.save_model('chatbot.pth', 'dimensions.json')
 
     assistant = ChatbotAssistant('intents.json')
     assistant.parse_intents()
@@ -172,6 +172,7 @@ if __name__ == '__main__':
         message = input('Enter your message: ')
         if message.lower() == 'exit':
             break
+        print(f'User: {message}', flush=True)
         response = assistant.process_message(message)
-        print(response, flush=True)
+        print(f'Bot: {response}', flush=True)
 
